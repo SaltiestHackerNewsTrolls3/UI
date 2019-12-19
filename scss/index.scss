@@ -1,3 +1,11 @@
-@use 'reset';
-@use 'global-vars-mixins';
-@use 'base';
+@import 'reset';
+@import 'base';
+
+
+h1 {
+    font-size: 10rem;
+
+    @media #{$phone} {
+        font-size: 20rem;
+    }
+}
