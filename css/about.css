@@ -56,4 +56,26 @@ table {
   font-size: 62.5%;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: 10rem;
+}
+@media (max-width:500px) {
+  h1 {
+    font-size: 20rem;
+  }
+}
+
+.portrait {
+  width: 48%;
+}
+
+.github-logo {
+  width: 30%;
+}
+
 /*# sourceMappingURL=about.css.map */

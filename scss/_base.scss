@@ -1,5 +1,19 @@
+@import 'reset';
 @import 'global-vars-mixins';
 
 :root {
     font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-size: 10rem;
+
+    @media #{$phone} {
+        font-size: 20rem;
+    }
 }

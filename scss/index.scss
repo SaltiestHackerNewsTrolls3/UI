@@ -1,11 +1,2 @@
-@import 'reset';
 @import 'base';
-
-
-h1 {
-    font-size: 10rem;
-
-    @media #{$phone} {
-        font-size: 20rem;
-    }
-}
+@import 'nav';
