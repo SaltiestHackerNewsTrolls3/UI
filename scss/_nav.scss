@@ -1,0 +1,22 @@
+#main-logo {
+  width: 10%;
+}
+header {
+  display: flex;
+  flex-flow: column nowrap;
+
+  nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-size: 3rem;
+  }
+  nav li {
+    padding: 0px 10px;
+  }
+
+  .title-bar {
+    display: flex;
+    align-items: center;
+  }
+}
