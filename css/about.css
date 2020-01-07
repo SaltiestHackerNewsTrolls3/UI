@@ -92,11 +92,22 @@ header .title-bar {
   align-items: center;
 }
 
-.portrait {
+.biography {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  text-align: right;
+}
+.biography:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: left;
+}
+.biography .portrait, .biography .info {
   width: 48%;
 }
-
-.github-logo {
+.biography .github-logo {
   width: 30%;
 }
 

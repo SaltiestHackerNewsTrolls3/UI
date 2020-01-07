@@ -9,7 +9,7 @@ header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    font-size: 3rem;
+    font-size: $medium;
   }
   nav li {
     padding: 0px 10px;

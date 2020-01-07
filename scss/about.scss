@@ -1,9 +1,21 @@
-@import 'base';
-@import 'nav';
+@import "base";
+@import "nav";
 
-.portrait {
-    width:48%;
-}
-.github-logo {
-    width:30%;
+.biography {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  text-align: right;
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: left;
+  }
+  .portrait, .info {
+    width: 48%;
+  }
+  .github-logo {
+    width: 30%;
+  }
 }

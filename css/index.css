@@ -92,4 +92,14 @@ header .title-bar {
   align-items: center;
 }
 
+main {
+  background-color: lightblue;
+  display: flex;
+  flex-flow: column nowrap;
+}
+main button, main p {
+  margin: 10px auto;
+  font-size: 3rem;
+}
+
 /*# sourceMappingURL=index.css.map */
