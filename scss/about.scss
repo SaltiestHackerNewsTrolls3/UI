@@ -2,20 +2,33 @@
 @import "nav";
 
 .biography {
+    padding: 20px 0px;
   width: 80%;
   margin: auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   text-align: right;
+  font-size: 2rem;
+
   &:nth-child(even) {
     flex-direction: row-reverse;
     text-align: left;
   }
-  .portrait, .info {
+  & > * {
     width: 48%;
   }
   .github-logo {
     width: 30%;
   }
+}
+.top-button {
+    font-size: 2rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 10rem;
+    height:2.1rem;
+    z-index: 10;
+    background-color: pink;
 }

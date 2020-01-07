@@ -54,6 +54,7 @@ table {
 
 :root {
   font-size: 62.5%;
+  background-color: lightgreen;
 }
 
 a {
@@ -93,22 +94,35 @@ header .title-bar {
 }
 
 .biography {
+  padding: 20px 0px;
   width: 80%;
   margin: auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   text-align: right;
+  font-size: 2rem;
 }
 .biography:nth-child(even) {
   flex-direction: row-reverse;
   text-align: left;
 }
-.biography .portrait, .biography .info {
+.biography > * {
   width: 48%;
 }
 .biography .github-logo {
   width: 30%;
+}
+
+.top-button {
+  font-size: 2rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 10rem;
+  height: 2.1rem;
+  z-index: 10;
+  background-color: pink;
 }
 
 /*# sourceMappingURL=about.css.map */

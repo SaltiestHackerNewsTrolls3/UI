@@ -54,6 +54,7 @@ table {
 
 :root {
   font-size: 62.5%;
+  background-color: lightgreen;
 }
 
 a {
@@ -93,7 +94,6 @@ header .title-bar {
 }
 
 main {
-  background-color: lightblue;
   display: flex;
   flex-flow: column nowrap;
 }
