@@ -5,16 +5,17 @@
   font-size: 62.5%;
   background-color: $background;
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
+* {
+  box-sizing: border-box;
 }
-
-// h1 {
-//   font-size: $largest;
-
-//   @media #{$phone} {
-//     font-size: 20rem;
-//   }
-// }
+.desktop-only {
+  @media #{$tablet} {
+    display:none;
+  }
+}
+.mobile-only {
+  display:none;
+  @media #{$tablet} {
+    display:flex;
+  }
+}

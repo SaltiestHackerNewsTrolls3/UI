@@ -52,14 +52,33 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 :root {
   font-size: 62.5%;
   background-color: lightgreen;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width:819px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+}
+@media (max-width:819px) {
+  .mobile-only {
+    display: flex;
+  }
 }
 
 #main-logo {
@@ -67,9 +86,12 @@ a {
 }
 
 header nav {
+  background-color: darkgreen;
+  color: white;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
 }
 header nav > * {
   width: 50%;
@@ -78,6 +100,11 @@ header nav > * {
 header nav .title-bar {
   font-size: 5rem;
   display: flex;
+}
+@media (max-width:819px) {
+  header nav .title-bar {
+    width: auto;
+  }
 }
 header nav ul {
   display: flex;
@@ -89,9 +116,37 @@ header nav li {
   padding: 0px 10px;
 }
 
+.hamburger-menu {
+  height: 5rem;
+  width: auto;
+  padding-right: 1rem;
+}
+
+#mobile-menu {
+  color: white;
+  display: none;
+  font-size: 3rem;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: darkgreen;
+}
+@media (min-width: 820px) {
+  #mobile-menu {
+    display: none;
+  }
+}
+#mobile-menu > * {
+  margin: 0.5rem 0px;
+  border: 1px solid black;
+  width: 90%;
+  text-align: center;
+}
+
 main {
   display: flex;
   flex-flow: column nowrap;
+  background-image: url("../images/main-background.jpg");
+  height: 80%;
 }
 main button, main p {
   margin: 10px auto;

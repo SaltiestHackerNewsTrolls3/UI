@@ -52,14 +52,33 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 :root {
   font-size: 62.5%;
   background-color: lightgreen;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+* {
+  box-sizing: border-box;
+}
+
+@media (max-width:819px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+}
+@media (max-width:819px) {
+  .mobile-only {
+    display: flex;
+  }
 }
 
 #main-logo {
@@ -67,9 +86,12 @@ a {
 }
 
 header nav {
+  background-color: darkgreen;
+  color: white;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
 }
 header nav > * {
   width: 50%;
@@ -78,6 +100,11 @@ header nav > * {
 header nav .title-bar {
   font-size: 5rem;
   display: flex;
+}
+@media (max-width:819px) {
+  header nav .title-bar {
+    width: auto;
+  }
 }
 header nav ul {
   display: flex;
@@ -89,19 +116,65 @@ header nav li {
   padding: 0px 10px;
 }
 
-.biography {
-  padding: 20px 0px;
+.hamburger-menu {
+  height: 5rem;
+  width: auto;
+  padding-right: 1rem;
+}
+
+#mobile-menu {
+  color: white;
+  display: none;
+  font-size: 3rem;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: darkgreen;
+}
+@media (min-width: 820px) {
+  #mobile-menu {
+    display: none;
+  }
+}
+#mobile-menu > * {
+  margin: 0.5rem 0px;
+  border: 1px solid black;
+  width: 90%;
+  text-align: center;
+}
+
+main {
   width: 80%;
   margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+@media (max-width:819px) {
+  main {
+    flex-flow: column;
+  }
+}
+@media (max-width:519px) {
+  main {
+    width: 95%;
+  }
+}
+
+.biography {
+  padding: 10px;
+  width: 49%;
+  margin: 5px auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   text-align: right;
   font-size: 2rem;
+  border: 2px solid black;
+  border-radius: 10px;
 }
-.biography:nth-child(even) {
-  flex-direction: row-reverse;
-  text-align: left;
+@media (max-width:819px) {
+  .biography {
+    width: 100%;
+  }
 }
 .biography > * {
   width: 48%;
@@ -115,10 +188,14 @@ header nav li {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
-  width: 10rem;
+  width: 12rem;
   height: 2.1rem;
   z-index: 10;
-  background-color: pink;
+  text-align: center;
+  background-color: darkgreen;
+  color: white;
+  border-radius: 0.5rem;
+  border: 1px solid black;
 }
 
 /*# sourceMappingURL=about.css.map */

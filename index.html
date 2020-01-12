@@ -4,6 +4,14 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>Saltiest HN Trolls</title>
+    <script src="js/nav.js"></script>
+    <script>window.addEventListener("resize", hideMobile);
+        function hideMobile() {
+            if (document.documentElement.clientWidth >= 819) {
+                document.getElementById("mobile-menu").style.display = "none";
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -13,12 +21,19 @@
                 <img id="main-logo" src="images/main-logo.png">
                 <h1>Saltiest HN Trolls</h1>
             </a>
-            <ul>
+            <ul class="desktop-only">
                 <li><a href="about.html">About</a></li>
                 <li><a>Contact Us</a></li>
-                <li><a>Log In</a></li>
+                <li><a href="https://bret-knight87.github.io/Front-End/">Log In</a></li>
             </ul>
+            <img src="images/menu.png" class="mobile-only hamburger-menu" onclick="toggleMenu()">
         </nav>
+        <ul id="mobile-menu" class="mobile-only">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a>Contact Us</a></li>
+            <li><a href="https://bret-knight87.github.io/Front-End/">Log In</a></li>
+        </ul>
     </header>
     <main>
         <button>

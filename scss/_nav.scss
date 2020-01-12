@@ -2,9 +2,12 @@
   width: 10%;
 }
 header nav {
+     background-color: $emphasis;
+     color: $text-em;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
   & > * {
     width: 50%;
     align-items: center;
@@ -12,6 +15,10 @@ header nav {
   .title-bar {
     font-size: $large;
     display: flex;
+
+    @media #{$tablet} {
+      width:auto;
+    }
   }
   ul {
     display: flex;
@@ -21,5 +28,27 @@ header nav {
   }
   li {
     padding: 0px 10px;
+  }
+}
+.hamburger-menu {
+  height: $large;
+  width: auto;
+  padding-right: 1rem;
+}
+#mobile-menu {
+  @media #{$desktop}{
+    display:none;
+  }
+  color:$text-em;
+  display:none;
+  font-size: $medium;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: $emphasis;
+  & > * {
+    margin: 0.5rem 0px;
+    border: 1px solid black;
+    width:90%;
+    text-align: center;
   }
 }
