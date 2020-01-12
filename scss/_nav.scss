@@ -36,6 +36,7 @@ header nav {
   padding-right: 1rem;
 }
 #mobile-menu {
+  z-index: 5;
   @media #{$desktop}{
     display:none;
   }

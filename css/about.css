@@ -123,6 +123,7 @@ header nav li {
 }
 
 #mobile-menu {
+  z-index: 5;
   color: white;
   display: none;
   font-size: 3rem;

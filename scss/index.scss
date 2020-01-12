@@ -1,12 +1,58 @@
-@import 'base';
-@import 'nav';
+@import "base";
+@import "nav";
 main {
-    display: flex;
-    flex-flow: column nowrap;
-    button, p {
-        margin: 10px auto;
-        font-size: $medium;
+    @media #{$phone}{
+        padding-top: 30rem;
     }
-    background-image: url("../images/main-background.jpg");
-    height:80%;
+}
+.top-layer {
+  z-index: 2;
+  position: absolute;
+  @media #{$tablet} {
+    top: 30%;
+  }
+  @media #{$phone} {
+    top:50%;
+  }
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  button,
+  p {
+    margin: 10px auto;
+    font-size: $medium;
+    // @media #{$tablet}{
+    //     color:$text-em;
+    // }
+  }
+  button {
+    background-color: $emphasis;
+    color: $text-em;
+    border-radius: 10px;
+  }
+}
+.background-layer {
+  position: absolute;
+  @media #{$phone} {
+    position: relative;
+  }
+  top: 50%;
+  transform: translate(0px, -50%);
+  
+  @media #{$tablet} {
+    top: 10%;
+    transform: scale(2.5);
+  }
+  z-index: -1;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+.copyright {
+  text-align: center;
+  font-size: $small;
 }

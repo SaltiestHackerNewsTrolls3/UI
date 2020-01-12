@@ -123,6 +123,7 @@ header nav li {
 }
 
 #mobile-menu {
+  z-index: 5;
   color: white;
   display: none;
   font-size: 3rem;
@@ -142,15 +143,68 @@ header nav li {
   text-align: center;
 }
 
-main {
+@media (max-width:519px) {
+  main {
+    padding-top: 30rem;
+  }
+}
+
+.top-layer {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
   display: flex;
   flex-flow: column nowrap;
-  background-image: url("../images/main-background.jpg");
-  height: 80%;
 }
-main button, main p {
+@media (max-width:819px) {
+  .top-layer {
+    top: 30%;
+  }
+}
+@media (max-width:519px) {
+  .top-layer {
+    top: 50%;
+  }
+}
+.top-layer button,
+.top-layer p {
   margin: 10px auto;
   font-size: 3rem;
+}
+.top-layer button {
+  background-color: darkgreen;
+  color: white;
+  border-radius: 10px;
+}
+
+.background-layer {
+  position: absolute;
+  top: 50%;
+  transform: translate(0px, -50%);
+  z-index: -1;
+  width: 100%;
+}
+@media (max-width:519px) {
+  .background-layer {
+    position: relative;
+  }
+}
+@media (max-width:819px) {
+  .background-layer {
+    top: 10%;
+    transform: scale(2.5);
+  }
+}
+.background-layer img {
+  width: 100%;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=index.css.map */
